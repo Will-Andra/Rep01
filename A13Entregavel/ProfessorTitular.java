@@ -5,22 +5,15 @@ public class ProfessorTitular extends Professor{
 
     //construtor
 
-
-
     //gets
     public String getEspecialidadeProfTitu() {
         return especialidadeProfTitu;
     }
 
-
-
     //set
     public void setEspecialidadeProfTitu(String especialidadeProfTitu) {
         this.especialidadeProfTitu = especialidadeProfTitu;
     }
-
-
-
 
 
 }

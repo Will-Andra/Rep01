@@ -1,14 +1,15 @@
 package A13Entregavel;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Curso {
-
+    public Aluno aluno;
     private String nomeCurso;
     private Integer codigoCurso;
     private Integer qtdAluno;
-    private ProfessorTitular professorTitular;
-    private ProfessorAdjunto professorAdjunto;
+
 
     //Construtor
     public Curso(String nomeCurso,Integer codigoCurso, Integer qtdAluno){
@@ -17,7 +18,7 @@ public class Curso {
         this.qtdAluno = qtdAluno;
 
     }
-
+public Curso(){}
 
 
     //get
@@ -33,13 +34,6 @@ public class Curso {
         return nomeCurso;
     }
 
-    public ProfessorAdjunto getProfessorAdjunto() {
-        return professorAdjunto;
-    }
-
-    public ProfessorTitular getProfessorTitular() {
-        return professorTitular;
-    }
 
     //set
     public void setCodigoCurso(Integer codigoCurso) {
@@ -54,13 +48,12 @@ public class Curso {
         this.qtdAluno = qtdAluno;
     }
 
-    public void setProfessorAdjunto(ProfessorAdjunto professorAdjunto) {
-        this.professorAdjunto = professorAdjunto;
+
+    public Boolean adicionarUmAluno(Aluno umAluno) {
+
+        return null;
     }
 
-    public void setProfessorTitular(ProfessorTitular professorTitular) {
-        this.professorTitular = professorTitular;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -69,15 +62,13 @@ public class Curso {
         Curso curso = (Curso) o;
         return nomeCurso.equals(curso.nomeCurso) &&
                 Objects.equals(codigoCurso, curso.codigoCurso) &&
-                Objects.equals(qtdAluno, curso.qtdAluno) &&
-                Objects.equals(professorTitular, curso.professorTitular) &&
-                Objects.equals(professorAdjunto, curso.professorAdjunto);
+                Objects.equals(qtdAluno, curso.qtdAluno);
     }
 
 
     @Override
     public String toString() {
-        return  nomeCurso ;
+        return  codigoCurso + " - " + nomeCurso ;
           //      ", codigoCurso=" + codigoCurso +", qtdAluno=" + qtdAluno +
           //      ", professorTitular=" + professorTitular +
           //      ", professorAdjunto=" + professorAdjunto +

@@ -43,6 +43,12 @@ public class Aluno {
         this.sobreNomeAlu = sobreNomeAlu;
     }
 
+
+
+
+
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -61,11 +67,6 @@ public class Aluno {
 
     @Override
     public String toString() {
-        return "Aluno{" +
-                "nomeAluno='" + nomeAluno + '\'' +
-                ", sobreNomeAlu='" + sobreNomeAlu + '\'' +
-                ", codigoAluno=" + codigoAluno +
-                ", Adds=" + Adds +
-                '}';
+        return codigoAluno +". " + nomeAluno + " " + sobreNomeAlu;
     }
 }

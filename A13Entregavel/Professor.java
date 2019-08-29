@@ -5,7 +5,8 @@ public abstract class Professor {
     private String sobreNomeProf;
     private Integer tempoCasa;
     private Integer codigoProf;
-
+    private String tipoProf;
+    private String alocadoProf;
 
     //get
     public Integer getCodigoProf() {
@@ -22,6 +23,14 @@ public abstract class Professor {
 
     public String getSobreNomeProf() {
         return sobreNomeProf;
+    }
+
+    public String getTipoProf() {
+        return tipoProf;
+    }
+
+    public String getAlocadoProf() {
+        return alocadoProf;
     }
 
     //set
@@ -41,6 +50,14 @@ public abstract class Professor {
         this.tempoCasa = tempoCasa;
     }
 
+    public void setTipoProf(String tipoProf){
+        this.tipoProf = tipoProf;
+    }
+
+    public void setAlocadoProf(String alocadoProf) {
+        this.alocadoProf = alocadoProf;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -49,5 +66,8 @@ public abstract class Professor {
         return nomeProfessor.equals(professor.nomeProfessor);
     }
 
-
+    @Override
+    public String toString() {
+        return codigoProf + ". "+ nomeProfessor + " " + sobreNomeProf + " - Prof " +  tipoProf ;
+    }
 }

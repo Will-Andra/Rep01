@@ -3,35 +3,28 @@ package A13Entregavel;
 import javax.xml.crypto.Data;
 import java.util.Date;
 
+
 public class Matricula {
-    public Aluno aluno;
-    public Curso curso;
+
+    public Curso curSo;
+    public Integer codCur;
+    public Integer codAlu;
     public Date dataDoDia;
     public String matricula;
 
       //construtor
-    public Matricula(Aluno aluno,Curso curso){
-        this.aluno= aluno;
-        this.curso = curso;
+    public Matricula(Integer cursos,Integer Alu){
+        this.codAlu= Alu;
+        this.codCur = cursos;
         this.dataDoDia = new Date();
-        this.matricula = "A" + aluno.getCodigoAluno()+dataDoDia;
-    }
-
-    public Aluno getAluno() {
-        return aluno;
-    }
-
-    public Curso getCurso() {
-        return curso;
-    }
-
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public Date getDataDoDia() {
-        return dataDoDia;
+        this.matricula =  "A-" + codAlu + codCur+ dataDoDia;
     }
 
 
+
+
+    @Override
+    public String toString() {
+        return  matricula ;
+    }
 }

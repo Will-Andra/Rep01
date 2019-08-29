@@ -3,6 +3,7 @@ package A13Entregavel;
 public class ProfessorAdjunto extends Professor {
     private Integer qtshsProfAdj;
 
+
     //Construtor
     public ProfessorAdjunto(){
 
@@ -20,4 +21,5 @@ public class ProfessorAdjunto extends Professor {
     public void setQtshsProfAdj(Integer qtshsProfAdj) {
         this.qtshsProfAdj = qtshsProfAdj;
     }
+
 }
